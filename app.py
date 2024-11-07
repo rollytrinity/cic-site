@@ -11,4 +11,10 @@ def home():
 def teachers():
     return render_template('teachers.html')
 
+@app.route('/students')
+def students():
+    return render_template('students.html')
 
+@app.route('pedagogies')
+def pedagogies():
+    return render_template('pedagogies.html')
