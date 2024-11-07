@@ -15,6 +15,6 @@ def teachers():
 def students():
     return render_template('students.html')
 
-@app.route('pedagogies')
+@app.route('/pedagogies')
 def pedagogies():
     return render_template('pedagogies.html')
