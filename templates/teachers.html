@@ -9,8 +9,8 @@
     <div class = "pb-1"></div>
     <h3>Resources required:</h3>
     <ul>
-        <li>one Marty robot for every group of 2-4 children (V1 or V2)</li>
-        <li>Marty's skate attachment (3D printable, download file <a href="{{ url_for('static',filename='marty_skates.zip') }}">here</a>)</li>
+        <li>One Marty robot for every group of 2-4 children (V1 or V2)</li>
+        <li>Marty's skate attachment (3D printable, download files <a href="{{ url_for('static',filename='marty_skates.zip') }}">here</a>)</li>
         <li>A computer for each group, set up for Scratch programming with Marty (Scratch programming environment for Marty V1 <a href="https://scratch3beta.robotical.io/">here</a>, alternative for Marty V2 <a href="https://marty-webapp.web.app/marty-blocks">here</a>)</li>
     </ul>
     <div class = "pb-1"></div>
@@ -75,7 +75,11 @@
     <div class = "pb-1"></div>
     <h3>Setup (5-10 mins)</h3>
     Show the students how to connect to Marty in Scratch, ideally displaying this at the front of the class on your own computer. 
-    Show them where they can find Marty's coding blocks, and how to execute 
+    Show them where they can find Marty's coding blocks (below all other Scratch blocks). 
+    Explain that we can use the computer to give instructions to Marty that let him move.
+    Begin with the simple code block below to show them how to move Marty's arms (save the walking for them to discover!) and click on the green flag to begin:
+    <div class = "pb-1"></div>
+    <img src="{{ url_for('static',filename='/images/codeblock1.png') }}">
     <div class = "pb-1"></div>
 </div>
 
@@ -84,7 +88,8 @@
 <div class="container rounded bg-primary">
     <div class = "pb-1"></div>
     <h3>Exploration (10 minutes)</h3>
-    Allow the students some time to 
+    Allow the students to experiment with Marty's code blocks. They will likely be excited to try a number of motions. 
+    Students here will naturally grasp the concept of sequence in programming, the idea that each instruction is executed one after another.
     <div class = "pb-1"></div>
 </div>
 
@@ -92,9 +97,49 @@
 
 <div class="container rounded bg-primary">
     <div class = "pb-1"></div>
-    <h3>Skating!</h3>
-    Let the students attempt to skate with their Marty robots. 
+    <h3>Introduction to Loops (10 minutes)</h3>
+    By now, the robots will likely be moving about in chaotic fashion!
+    Stop the class and ask them to switch off their robots while you speak.
+    Now present them with the Control block of Scratch. Add a block with a repeat loop first, iterating three times.
+    Then present them with a forever loop.
     <div class = "pb-1"></div>
 </div>
+
+<div class = "pb-3"></div>
+
+<div class="container rounded bg-primary">
+    <div class = "pb-1"></div>
+    <h3>Skating! (10 minutes)</h3>
+    Let the students attempt to skate with their Marty robots. Now encourage them to incorporate loops into their code.
+    <div class = "pb-1"></div>
+</div>
+
+<div class = "pb-3"></div>
+
+<div class="container rounded bg-primary">
+    <div class = "pb-1"></div>
+    <h3>Cone challenge</h3>
+    Create a set of points to weave around for each group. Ask them to try and weave through the cones as fast as they are able.
+    <div class = "pb-1"></div>
+</div>
+
+<div class = "pb-3"></div>
+
+<div class="container rounded bg-primary">
+    <div class = "pb-1"></div>
+    <h3>The race!</h3>
+    Challenge the groups to race through the cones! See which Marty skates best!
+    <div class = "pb-1"></div>
+</div>
+
+<div class = "pb-3"></div>
+
+<div class="container rounded bg-primary">
+    <div class = "pb-1"></div>
+    <h3>Reflection</h3>
+    Provide the students with the reflection sheet which will ask them a few short questions about what they have done.
+    <div class = "pb-1"></div>
+</div>
+
 
 {% endblock %}
