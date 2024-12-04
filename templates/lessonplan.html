@@ -1,0 +1,199 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container rounded">
+    <h1>Lesson Plan</h1>
+</div>
+
+<div class="container rounded bg-info">
+    <div class = "pb-1"></div>
+    <h3>Resources required:</h3>
+    <ul>
+        <li>One Marty robot for every pair of students (V1 or V2, ensure they are fully charged)</li>
+        <li>Marty's skate attachment</li>
+        <li>A computer for each group</li>
+        <li>A printed copy for each student of the reflection sheet, downloadable <a href="{{ url_for('static',filename='reflection_sheet.docx') }}">here</a></li>
+    </ul>
+    <div class = "pb-1"></div>
+    Not sure if you have a Marty V1 or V2? If you or your school acquired the Marty robots from 2020 onwards, they are likely to be V2.
+    Note that this lesson plan was designed using a V1 Marty, but it should be compatible with V2 Marty including 3D printed parts - just be sure to double check connection and programming environments.
+    <div class = "pb-3"></div>
+</div>
+
+<div class = "pb-3"></div>
+
+<div class="container rounded bg-info">
+    <div class = "pb-1"></div>
+    <h3>Preparation ahead of class</h3>
+    Be aware you will need to make some small preparations in advance of the lesson!
+    <div class = "pb-3"></div>
+</div>
+
+<div class = "pb-3"></div>
+
+<div class="container rounded bg-info">
+    <div class = "pb-1"></div>
+    <h4>The skates</h4>
+    You will need to either be provided with or 3D print your own skate feet for Marty. Please view the <a href="/assembly">assembly page</a> for complete instructions if required.
+    <div class = "pb-3"></div>
+</div>
+
+<div class = "pb-3"></div>
+
+<div class="container rounded bg-info">
+    <div class = "pb-1"></div>
+    <h4>Computer setup</h4>
+    You may want to set up the computers in advance with the Scratch page where students will be programming to save time, or you could provide them with the link.
+    For Marty V1, this page will be <a href="https://scratch3beta.robotical.io/">here</a> and for Marty V2 it will be <a href="https://marty-webapp.web.app/">here</a>, select MartyBlocks once connected.
+    <div class = "pb-1"></div>
+    It may also be worth experimenting with connecting to the Marty robots in advance of the session as they can be temperamental. 
+    Sometimes if connection fails it can be useful to enter the robot's IP address into the Scratch program.
+    You can access this using the app on either iOS or Android. This also can be used to set up the Marty robots from scratch if they haven't been used before.
+    Instructions are provided for the Marty V1 app <a href="https://userguides.robotical.io/martyv1/using-marty/play">here</a> and V2 app <a href="https://userguides.robotical.io/martyv2/userguides/app">here</a>.
+    <div class = "pb-3"></div>
+</div>
+
+<div class = "pb-3"></div>
+
+<div class="container rounded bg-primary">
+    <div class = "pb-1"></div>
+    <h3>Introduction (5 mins)</h3>
+    Split students into pairs. Explain they will be working together to program their Marty robots, and teach them how to roller skate!
+    Let them have a brief look at the Marty robots - they may be curious.
+    Introduce the roles of <b>driver</b> and <b>navigator</b>. When working as a group to write code, they can do <b>pair programming</b>, where
+    the driver will create the program, and the navigator will observe, providing observations, ideas, and direction. Ask students to initially select one of those roles in their pairs.
+    <div class = "pb-3"></div>
+</div>
+
+<div class = "pb-3"></div>
+
+<div class="container rounded bg-primary">
+    <div class = "pb-1"></div>
+    <h3>Robots! (2 mins)</h3>
+    Provide a short explanation of how robots work: robots consist of a set of <b>motors</b>. A motor is simply a machine
+    that creates movement. Marty, for example, uses a set of <b>servo motors</b> that make each part of his body move - his eyes, his arms, his hips, his knees, his legs and his feet. By creating instructions that move Marty's motors to different positions, we can make him perform useful movements.
+    This is how many robots function. We will be using a program called <b>Scratch</b> to provide instructions for moving Marty.
+    <div class = "pb-3"></div>
+</div>
+
+<div class = "pb-3"></div>
+
+<div class="container rounded bg-primary">
+    <div class = "pb-1"></div>
+    <h3>Setup (5-10 mins)</h3>
+    Show the students how to connect to Marty, ideally displaying this at the front of the class on your own computer. Do not yet allow access to the computers. 
+    Open the Scratch page, and select your Marty from the list of options to connect from. Let's have a look at the interface!
+    <div class = "pb-1"></div>
+    <img src="{{ url_for('static',filename='/images/scratch_interface.png') }}" width="1200">
+    <div class = "pb-1"></div>
+    On the left, we can see a set of <b>code blocks</b>. Each block can be used to create an instruction. They are split into different categories - the main category we care about for now is Marty the Robot, which is already open.
+    We can drag the code blocks into the area in the middle to write our program (our set of instructions for Marty).
+    Create the following program by dragging the blocks - the green flag block is in the <b>Events</b> tab.
+    <div class = "pb-1"></div>
+    <img src="{{ url_for('static',filename='/images/codeblock1.png') }}" width="200">
+    <div class = "pb-1"></div>
+    Now click on the green flag - explain this is how we will start our program. Your Marty should begin to wiggle!
+    <div class = "pb-1"></div>
+    Now ask the students to connect to their own Marty robots, assisting with any connection issues.
+    <div class = "pb-3"></div>
+</div>
+
+<div class = "pb-3"></div>
+
+<div class="container rounded bg-primary">
+    <div class = "pb-1"></div>
+    <h3>Exploration (10 mins)</h3>
+    By now, the students are probably excited to try making their robots move! Allow them to experiment with the different Marty code blocks.
+    At this point, do not worry too much about prompting them, just help with any technical issues or questions and let them familiarise themselves with how the robot and code blocks function.
+    <div class = "pb-3"></div>
+</div>
+
+<div class = "pb-3"></div>
+
+<div class="container rounded bg-primary">
+    <div class = "pb-1"></div>
+    <h3>Moving Marty's joints (10 mins)</h3>
+    Now make sure all computers are locked/inaccessible while you perform your explanation of some other tools that could help.
+    Let's enter the following program:
+    <div class = "pb-1"></div>
+    <img src="{{ url_for('static',filename='/images/codeblock2.png') }}" width="500">
+    <div class = "pb-1"></div>
+    You'll see Marty's arm move all the way forwards, and then all the way back! Remember when we talked about Marty's <b>servo motors</b>.
+    What's special about these is that they can be set to move to a certain <b>angle</b> by entering a number from -100 to 100. Try using these blocks for yourself to make Marty perform custom movements.
+    You can also change which part of Marty's body moves using the dropdown box in the code block.
+    <div class = "pb-1"></div>
+    Ask students to experiment with this block for 5-10 minutes. Try and keep them on task. If they have tried one joint, ask if they have experimented with another.
+    Can they point out which joint is which - for example, which part of Marty's body does <b>right twist</b> move?
+    What happens if they enter an angle of 0?
+    When you feel students have explored this concept, or are beginnning to become distracted, lock the computers again to continue on to the next explanation.
+    <div class = "pb-3"></div>
+</div>
+
+<div class = "pb-3"></div>
+
+<div class="container rounded bg-primary">
+    <div class = "pb-1"></div>
+    <h3>Introduction to Loops (5 mins)</h3>
+    Show students the <b>Control</b> tab.
+    <div class = "pb-1"></div>
+    <img src="{{ url_for('static',filename='/images/controlblock.png') }}" width="500">
+    <div class = "pb-1"></div>
+    These blocks can be used to create more complicated programs. Enter the following code, and ask the students what they think Marty is going to do when you run it:
+    <div class = "pb-1"></div>
+    <img src="{{ url_for('static',filename='/images/codeblock3.png') }}" width="200">
+    <div class = "pb-1"></div>
+    They will likely guess, correctly, that Marty will kick his leg twice. 
+    Run the program and let them see for themselves. 
+    Explain that this is called a <b>loop</b>. When Marty does an action, this block can be used to <b>loop</b> back ot the start of the code and repeat it.
+    Suggest that they try incorporating the <b>wait</b> and <b>repeat</b> blocks in their code - they could come in handy!
+    <div class = "pb-3"></div>
+</div>
+
+<div class = "pb-3"></div>
+
+<div class="container rounded bg-primary">
+    <div class = "pb-1"></div>
+    <h3>The Challenge (30 minutes)</h3>
+    Explain that now the students will be working with the skills that they have learnt to help their robots skate.
+    At the end, the robots will race each other to see which is the fastest skater!
+    <div class = "pb-1"></div>
+    At this point, ask the driver and navigators to swap to make sure students try both roles. Allow them to freely experiment with programming their robots to skate.
+    Alternate around the groups. Try and encourage them to keep working in the pair programming format - i.e. if both students are programming, ask them to make sure only the driver is touching the computer.
+    As they work, you could ask the navigator questions about the code.
+    <div class = "pb-1"></div>
+    <h5>Question prompts</h5>
+    <ul>
+        <li>What do you think this code will do when you run it? Talk about the outcome afterwards.</li>
+        <li>Could you add a loop here? (if code is repeated)</li>
+        <li>What do you think is going well with your code so far? What needs changing?</li>
+    </ul>
+    <div class = "pb-1"></div>
+    Halfway through, ask the students to lock their computers. Ask them to discuss what they have worked on so far.
+    Ask each group in 2-5 minutes to come up with a written list together of <b>two things that are going well</b> and <b>two things they need to work on</b>.
+    Now reopen the computers, alternating driver and navigator one more time, and prompt them to continue working, bearing their list in mind.
+    As you engage with the groups, be aware to not immediately provide them with solutions to their problems, but ask questions that might hint them towards a possible solution. 
+    <div class = "pb-3"></div>
+</div>
+
+<div class = "pb-3"></div>
+
+<div class="container rounded bg-primary">
+    <div class = "pb-1"></div>
+    <h3>The Race! (5 mins)</h3>
+    Now the time has come! Line up the robots and prepare to race! Count in the groups. On go, they click the green flag and the race begins.
+    Try and get the students excited! It should be a fun and exciting celebration of what they have achieved. If prizes are awarded to winning groups, make them small treats - emphasise that all groups should be proud of their hard work.
+    <div class = "pb-3"></div>
+</div>
+
+<div class = "pb-3"></div>
+
+<div class="container rounded bg-primary">
+    <div class = "pb-1"></div>
+    <h3>Reflection (10 mins)</h3>
+    Provide the students with the reflection sheet which will ask them a few short questions about what they have done. Place the robots aside and turn off the computers to reduce distractions.
+    Emphasise it is not a test - students are free to discuss and ask questions. If they are struggling, remind them of different part of their work that relate to each question.
+    <div class = "pb-3"></div>
+</div>
+
+
+{% endblock %}

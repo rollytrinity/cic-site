@@ -7,13 +7,13 @@ app = Flask(__name__,template_folder='./templates',static_folder='./static')
 def home():
     return render_template('home.html')
 
-@app.route('/teachers')
+@app.route('/lessonplan')
 def teachers():
-    return render_template('teachers.html')
+    return render_template('lessonplan.html')
 
-@app.route('/students')
+@app.route('/assembly')
 def students():
-    return render_template('students.html')
+    return render_template('assembly.html')
 
 @app.route('/pedagogies')
 def pedagogies():

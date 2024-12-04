@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container rounded">
+    <h1>Skate Assembly</h1>
+</div>
+
+<div class="container rounded bg-info">
+    <div class = "pb-1"></div>
+    If you are not provided with your own set of Marty skates, this page will provide instructions on how to 3D print and assemble your own. 
+    If required, please seek external support for this process.
+    <div class = "pb-1"></div>
+</div>
+
+<div class = "pb-2"></div>
+
+<div class="container rounded bg-info">
+    <div class = "pb-1"></div>
+    <h3>3D printing</h3>
+    <div class = "pb-1"></div>
+    Access the file's for Marty's skates <a href="{{ url_for('static',filename='marty_skates.zip') }}">here</a>. 
+    Extract the files. There are two provided: 'axles_and_wheels.stl' and 'skate_feet.stl'. Slice the files into gcode using your printer's relevant software.
+    Print two copies of each file. Supports are recommended.
+    <div class = "pb-1"></div>
+</div>
+
+<div class = "pb-2"></div>
+
+<div class="container rounded bg-info">
+    <div class = "pb-1"></div>
+    <h3>Assembly</h3>
+    <div class = "pb-1"></div>
+    <h6>Steps</h6>
+    <ol>
+        <li>Slide the axles through the holes under the skates.</li>
+        <li>Use a glue gun to secure the axle to the wheel. Ensure the wheels are not tightly attached to the skate otherwise they will be unable to turn.</li>
+        <li>Leave the skates until the glue is fully dried.</li>
+        <li>With a Phillip's screwdriver, unscrew Marty's feet, and reattach the skate in place. View step 10 on Robotical's build guide <a href="https://userguides.robotical.io/martyv1/buildguide/1_legs">here</a> for Marty V1, and steps 15-24 <a href="https://userguides.robotical.io/_media/martyv2/userguides/marty_the_robot_v2_-_build_guide_batch_2_20210615_-compress.pdf">here</a> for Marty V2.</li>
+    </ol>
+    <div class = "pb-1"></div>
+    <img src="{{ url_for('static',filename='/images/marty_feet.jpeg') }}" width="500">
+    <div class = "pb-1"></div>
+</div>
+
+<div class = "pb-2"></div>
+
+<div class="container rounded bg-info">
+    <div class = "pb-1"></div>
+    <h3>Support</h3>
+    <div class = "pb-1"></div>
+    Please do not hesitate to contact myself at <a href="mailto: s2014139@ed.ac.uk">s2014139@ed.ac.uk</a> for support. 
+    <div class = "pb-1"></div>
+</div>
+
+<div class = "pb-2"></div>
+
+{% endblock %}
